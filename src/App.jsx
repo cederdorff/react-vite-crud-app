@@ -1,9 +1,8 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
+import CreatePage from "./pages/CreatePage";
 import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
-import PostsPage from "./pages/PostsPage";
+import UpdatePage from "./pages/UpdatePage";
 
 function App() {
     return (
@@ -12,9 +11,8 @@ function App() {
             <main>
                 <Routes>
                     <Route path="/" element={<HomePage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/posts" element={<PostsPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/create" element={<CreatePage />} />
+                    <Route path="/posts/:postId" element={<UpdatePage />} />
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
             </main>
