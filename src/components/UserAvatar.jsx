@@ -11,7 +11,7 @@ export default function UserAvatar({ uid }) {
         }
         getUser();
     }, [uid]);
-    console.log(uid);
+
     return (
         <div className="avatar">
             <img src={user?.image} alt={user?.id} />
