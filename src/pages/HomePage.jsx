@@ -25,8 +25,8 @@ export default function HomePage() {
     let postsToDisplay = [...posts];
 
     if (searchValue) {
-        postsToDisplay = postsToDisplay.filter(user =>
-            user.caption.toLowerCase().includes(searchValue)
+        postsToDisplay = postsToDisplay.filter(post =>
+            post.caption.toLowerCase().includes(searchValue)
         );
     }
     postsToDisplay.sort((post1, post2) => {
