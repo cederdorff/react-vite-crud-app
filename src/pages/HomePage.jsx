@@ -6,13 +6,14 @@ export default function HomePage() {
 
     useEffect(() => {
         async function getPosts() {
-            const url = "https://fb-rest-race-default-rtdb.firebaseio.com/posts.json";
+            const url =
+                "https://fb-rest-race-default-rtdb.firebaseio.com/posts.json";
             const response = await fetch(url);
             const data = await response.json();
-            const postsArray = Object.keys(data).map(key => ({ id: key, ...data[key] })); // from object to array
-
-            console.log(data);
-            console.log(postsArray);
+            const postsArray = Object.keys(data).map(key => ({
+                id: key,
+                ...data[key]
+            })); // from object to array
             setPosts(postsArray);
         }
 
