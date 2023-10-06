@@ -5,6 +5,7 @@ export default function CreatePage() {
     const navigate = useNavigate();
 
     async function createPost(newPost) {
+        newPost.createdAt = new Date().getTime();
         newPost.uid = "fTs84KRoYw5pRZEWCq2Z"; // default user id added
 
         const url =
