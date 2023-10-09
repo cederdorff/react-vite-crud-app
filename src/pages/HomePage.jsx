@@ -45,9 +45,7 @@ export default function HomePage() {
                 <label>
                     Sort by
                     <select onChange={e => setSortBy(e.target.value)}>
-                        <option value="createdAt" selected>
-                            Newest
-                        </option>
+                        <option value="createdAt">Newest</option>
                         <option value="caption">Caption</option>
                     </select>
                 </label>
