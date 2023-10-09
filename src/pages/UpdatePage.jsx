@@ -21,9 +21,8 @@ export default function UpdatePage() {
     }, [url]);
 
     async function updatePost(postToUpdate) {
-        postToUpdate.uid = post.uid;
         const response = await fetch(url, {
-            method: "PUT",
+            method: "PATCH",
             body: JSON.stringify(postToUpdate)
         });
         if (response.ok) {
